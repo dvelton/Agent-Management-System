@@ -9,15 +9,15 @@ The **Enterprise Agent Management System (EAMS)** is an open-source platform for
 ## Screenshots
 
 ### Dashboard View
-[Dashboard view](images/dashboard-view.png)
+![Dashboard view](images/dashboard-view.png)
 *Shows the "Dashboard" with key agent statistics and performance metrics in a card-based layout, including total agents, active agents, onboarding, and in-review statuses.*
 
 ### Governance & Compliance
-[Governance section](images/governance-section.png)
+![Governance section](images/governance-section.png)
 *Displays the "Governance & Compliance" section with a permissions matrix for agent roles and access levels, highlighting how permissions are managed and audited.*
 
 ### Organization Chart
-[Organization structure](images/organization-structure.png)
+![Organization structure](images/organization-structure.png)
 *Presents the "Organization Chart" and agent hierarchy, visualizing the organizational structure and agent relationships, with options to add new agents and view statuses.*
 
 ---
