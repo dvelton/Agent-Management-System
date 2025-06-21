@@ -182,8 +182,3 @@ EAMS brings the structure and wisdom of human organizational management to the w
 MIT
 
 ---
-
-## Acknowledgements
-
-- Human organizational science and management literature
-- Open-source agentic AI communities
