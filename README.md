@@ -1,7 +1,5 @@
 # Enterprise Agent Management System (EAMS)
 
-## Overview
-
 The **Enterprise Agent Management System (EAMS)** is an open-source platform for orchestrating, governing, and optimizing hierarchical AI agent workforces at enterprise scale. EAMS adapts human organizational wisdom—such as span of control, delegation, and matrix management—to modern agentic AI systems, enabling organizations to manage artificial agents with the same rigor and flexibility found in mature corporate structures.
 
 ---
