@@ -203,7 +203,6 @@ MIT
 
 # Applying Human Employment Hierarchies to Agentic AI Systems: A Practical Framework
 
-## Abstract
 As agentic AI systems become more sophisticated and numerous, the challenge of organizing them effectively becomes paramount. This paper explores how centuries of human organizational wisdom can be systematically applied to multi-agent AI systems, providing practical frameworks for implementing hierarchical structures that leverage both human-tested principles and AI-specific capabilities.
 
 ## 1. Introduction
