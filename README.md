@@ -4,8 +4,6 @@ The **Enterprise Agent Management System (EAMS)** is an experimental (i.e. not a
 
 ---
 
-## Screenshots
-
 ### Dashboard View
 ![Dashboard view](images/dashboard-view.png)
 *Shows the "Dashboard" with key agent statistics and performance metrics in a card-based layout, including total agents, active agents, onboarding, and in-review statuses.*
