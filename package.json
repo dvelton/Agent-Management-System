@@ -82,7 +82,7 @@
         "@vitejs/plugin-react-swc": "^3.10.1",
         "eslint": "^9.28.0",
         "eslint-plugin-react-hooks": "^5.2.0",
-        "eslint-plugin-react-refresh": "^0.4.19",
+        "eslint-plugin-react-refresh": "^0.4.20",
         "globals": "^16.0.0",
         "tailwindcss": "^4.0.17",
         "typescript": "~5.7.2",
