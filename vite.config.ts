@@ -15,7 +15,6 @@ import { resolve } from 'path'
 
 const extraPlugins: PluginOption[] = [];
 
-const GITHUB_RUNTIME_PERMANENT_NAME = process.env.GITHUB_RUNTIME_PERMANENT_NAME || process.env.CODESPACE_NAME?.substring(0, 20);
 const projectRoot = process.env.PROJECT_ROOT || import.meta.dirname
 
 // https://vite.dev/config/
@@ -34,7 +33,6 @@ export default defineConfig({
   },
   define: {
     // ensure that you give these types in `src/vite-end.d.ts`
-    GITHUB_RUNTIME_PERMANENT_NAME: JSON.stringify(GITHUB_RUNTIME_PERMANENT_NAME),
     BASE_KV_SERVICE_URL: JSON.stringify("/_spark/kv"),
   },
   server: {
