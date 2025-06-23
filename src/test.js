@@ -4,4 +4,4 @@ import ReactDOM from 'react-dom';
 
 // Log versions to console
 console.log('React version:', React.version);
-console.log('ReactDOM version:', ReactDOM.version);
+// ReactDOM does not have a version property, only React does

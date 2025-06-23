@@ -2,6 +2,12 @@
 
 set -e
 
+# Check for required TEMPLATE_PAT environment variable
+if [ -z "$TEMPLATE_PAT" ]; then
+    echo "Error: TEMPLATE_PAT environment variable is required but not set"
+    exit 1
+fi
+
 echo "Checking for updates to workbench-template from GitHub"
 
 WORKSPACE_DIR="/workspaces/spark-template"
@@ -25,7 +31,7 @@ fi
 echo "New version found. Downloading latest release."
 
 TEMP_DIR=$(mktemp -d)
-cd $TEMP_DIR
+cd "$TEMP_DIR"
 
 DOWNLOAD_URL=$(echo "$LATEST_RELEASE" | jq -r '.assets[0].url')
 curl -L -o dist.zip -H "Authorization: token $TEMPLATE_PAT" -H "Accept: application/octet-stream" "$DOWNLOAD_URL"
@@ -34,15 +40,15 @@ unzip -o dist.zip
 rm dist.zip
 
 # Upgrade the Spark Runtime tools
-sudo mv ./spark-sdk-dist/server.js /usr/local/bin/spark-server
-sudo mv ./spark-sdk-dist/designer.js /usr/local/bin/spark-designer
-sudo mv ./spark-sdk-dist/upload-to-remote.sh /usr/local/bin/upload-to-remote.sh
-sudo mv ./spark-sdk-dist/deploy.sh /usr/local/bin/deploy.sh
-sudo mv ./spark-sdk-dist/hydrate.sh /usr/local/bin/hydrate.sh
-sudo mv ./spark-sdk-dist/file-syncer.js /usr/local/bin/spark-file-syncer
-sudo mv ./spark-sdk-dist/spark-agent.js /usr/local/bin/spark-agent
-sudo cp ./spark-sdk-dist/proxy.js /workspaces/proxy.js
-sudo mv ./spark-sdk-dist/proxy.js  /usr/local/bin/proxy.js
+sudo mv -f ./spark-sdk-dist/server.js /usr/local/bin/spark-server
+sudo mv -f ./spark-sdk-dist/designer.js /usr/local/bin/spark-designer
+sudo mv -f ./spark-sdk-dist/upload-to-remote.sh /usr/local/bin/upload-to-remote.sh
+sudo mv -f ./spark-sdk-dist/deploy.sh /usr/local/bin/deploy.sh
+sudo mv -f ./spark-sdk-dist/hydrate.sh /usr/local/bin/hydrate.sh
+sudo mv -f ./spark-sdk-dist/file-syncer.js /usr/local/bin/spark-file-syncer
+sudo mv -f ./spark-sdk-dist/spark-agent.js /usr/local/bin/spark-agent
+sudo cp -f ./spark-sdk-dist/proxy.js /workspaces/proxy.js
+sudo mv -f ./spark-sdk-dist/proxy.js  /usr/local/bin/proxy.js
 
 # Upgrade the Spark Tools package
 if [ -f "$TOOLS_MARKER_FILE" ] && [ "$(cat "$TOOLS_MARKER_FILE")" == "$(cat ./spark-sdk-dist/spark-tools-version)" ]; then
@@ -50,21 +56,21 @@ if [ -f "$TOOLS_MARKER_FILE" ] && [ "$(cat "$TOOLS_MARKER_FILE")" == "$(cat ./sp
 else
     tar -xzf ./spark-sdk-dist/spark-tools.tgz
 
-    sudo rm -rf $WORKSPACE_DIR/packages/spark-tools
-    mkdir -p $WORKSPACE_DIR/packages/spark-tools
-    sudo mv ./package/* $WORKSPACE_DIR/packages/spark-tools
-    sudo rmdir ./package
+    sudo rm -rf "$WORKSPACE_DIR"/packages/spark-tools
+    mkdir -p "$WORKSPACE_DIR"/packages/spark-tools
+    sudo mv -f ./package/* "$WORKSPACE_DIR"/packages/spark-tools
+    sudo rm -rf ./package
 
-    cd $WORKSPACE_DIR
+    cd "$WORKSPACE_DIR"
     npm i -f
     cd - >/dev/null
 
-    sudo cp ./spark-sdk-dist/spark-tools-version "$TOOLS_MARKER_FILE"
+    sudo cp -f ./spark-sdk-dist/spark-tools-version "$TOOLS_MARKER_FILE"
 fi
 
 # Upgrade the GH CLI extension
 sudo rm -rf /usr/local/bin/gh-spark-cli
-sudo mv spark-sdk-dist/gh-spark-cli /usr/local/bin/
+sudo mv -f spark-sdk-dist/gh-spark-cli /usr/local/bin/
 cd /usr/local/bin/gh-spark-cli
 # The --force option on gh extension install isn't honored for local, so manually remove it first.
 # It's not an issue if that fails though as that probably just means it was the first time running this.
@@ -73,7 +79,7 @@ gh extension install .
 gh alias set spark spark-cli --clobber
 cd - >/dev/null
 
-rm -rf $TEMP_DIR
+rm -rf "$TEMP_DIR"
 
 # Update marker file with latest release ID
 echo "$RELEASE_ID" | sudo tee "$RELEASE_MARKER_FILE" > /dev/null
