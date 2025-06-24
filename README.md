@@ -1,6 +1,6 @@
 # Enterprise Agent Management System (EAMS)
 
-Managing AI agents may largely become an extension of the legal and organizational controls companies already use for people—clear roles, permissions, and oversight still apply. The **Enterprise Agent Management System (EAMS)** is an experimental (i.e. not a supported product, not for production use) open-source project to explore how technology might orchestrate, govern, and optimize hierarchical AI agent workforces at enterprise scale. EAMS adapts human organizational wisdom—such as span of control, delegation, and matrix management—to modern agentic AI systems, to evaluate how organizations can manage artificial agents with the same rigor and flexibility found in mature corporate structures.
+Managing AI agents may largely become an extension of the legal and organizational controls companies already use for people—with clear roles, permissions, and oversight. The **Enterprise Agent Management System (EAMS)** is an experimental (i.e. not a supported product, not for production use) open-source project to explore how technology might orchestrate, govern, and optimize hierarchical AI agent workforces at enterprise scale. EAMS adapts human organizational wisdom—such as span of control, delegation, and matrix management—to modern agentic AI systems, to evaluate how organizations can manage artificial agents with the same rigor and flexibility found in mature corporate structures.
 
 1. **Managing Agents**
    - AI agents can have roles, reporting lines, and permissions, like employees in a company.
