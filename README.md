@@ -21,9 +21,9 @@ Managing AI agents may largely become an extension of the legal and organization
 ![Governance section](images/governance-section.png)
 *Displays the "Governance & Compliance" section with a permissions matrix for agent roles and access levels, highlighting how permissions are managed and audited.*
 
-### Organization Chart
+### Org Chart
 ![Organization structure](images/organization-structure.png)
-*Presents the "Organization Chart" and agent hierarchy, visualizing the organizational structure and agent relationships, with options to add new agents and view statuses.*
+*Presents the "Org Chart" and agent hierarchy, visualizing the organizational structure and agent relationships, with options to add new agents and view statuses.*
 
 ---
 
