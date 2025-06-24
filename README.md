@@ -173,7 +173,7 @@ EAMS brings the structure and wisdom of human organizational management to the w
 ## Getting Started
 
 1. **Demonstration**
-   - This is just a demonstration project. Try out the buttons (here)[https://enterprise-agent-man--dvelton.github.app/]. To go deeper try the below.
+   - This is just a demonstration project. Try out the buttons [here](https://enterprise-agent-man--dvelton.github.app/). To go deeper try the below.
 1. **Clone the repository**
 2. **Install dependencies:**  
    ```bash
