@@ -70,7 +70,7 @@ Centuries of human management have produced robust frameworks for organizing com
 
 | Principle           | Human Formulation                                | EAMS Implementation Example                                                                                  |
 |---------------------|--------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
-| Span of Control     | 5-8 direct reports per manager                   | Supervisory agents dynamically adjust span based on workload and resource utilization                        |
+| Span of Control     | 5-7 direct reports per manager                   | Supervisory agents dynamically adjust span based on workload and resource utilization                        |
 | Unity of Command    | One direct supervisor per employee               | Each agent has a primary reporting line, with protocols for dual/matrix reporting and conflict resolution    |
 | Delegation          | Clear authority boundaries, escalation           | Agents escalate decisions below confidence thresholds; authority matrices define decision boundaries         |
 | Matrix Organizations| Dual reporting (functional & project)            | Agents split reporting to domain-expert and project-lead supervisors; automated priority negotiation         |
