@@ -1,5 +1,7 @@
 # Enterprise Agent Management System
 
+> **[Live Demo →](https://dvelton.github.io/Agent-Management-System/)**
+
 What if managing AI agents became an extension of the legal and organizational controls companies already use for people—with clear roles, permissions, and oversight? The **Enterprise Agent Management System (EAMS)** is an experimental (i.e. not a supported product, not for production use) open-source project to explore how technology might orchestrate, govern, and optimize hierarchical AI agent workforces at enterprise scale. EAMS adapts human organizational principles—such as span of control, delegation, and matrix management—to modern agentic AI systems, to evaluate how organizations can manage artificial agents with the same rigor and flexibility found in mature corporate structures.
 
 1. **Managing Agents**
@@ -382,3 +384,32 @@ Human organizational hierarchies offer a wealth of tested principles for managin
 The key advantage of AI hierarchies lies in their ability to combine human-tested organizational wisdom with unique capabilities like dynamic restructuring, automated conflict resolution, and data-driven performance optimization. As agentic AI systems become more prevalent, these hybrid approaches will be essential for managing increasingly complex artificial organizations.
 
 Success requires careful attention to both the strengths of human organizational principles and the unique characteristics of artificial agents, creating hierarchies that are greater than the sum of their parts.
+
+---
+
+## Tech Stack
+
+- **Frontend**: React 19, TypeScript, Vite
+- **Styling**: Tailwind CSS 4, shadcn/ui, Radix UI primitives
+- **Charts**: Recharts
+- **Animation**: Framer Motion
+- **Persistence**: Browser localStorage
+
+## Getting Started
+
+```bash
+git clone https://github.com/dvelton/Agent-Management-System.git
+cd Agent-Management-System
+npm install
+npm run dev
+```
+
+## Deployment
+
+This app is deployed as a static site via **GitHub Pages**. On every push to `main`, a GitHub Actions workflow builds the Vite app and deploys it automatically.
+
+**Live URL**: [https://dvelton.github.io/Agent-Management-System/](https://dvelton.github.io/Agent-Management-System/)
+
+## License
+
+MIT License. See [LICENSE](./LICENSE) for details.

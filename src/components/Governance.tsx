@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Badge } from "@/components/ui/badge"
-import { Search, Shield, AlertOctagon, ClipboardCheck, Target } from "@phosphor-icons/react"
+import { MagnifyingGlass, Shield, WarningOctagon, ClipboardText, Target } from "@phosphor-icons/react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 
@@ -142,7 +142,7 @@ export function Governance({ agentData, updateAgentData }: GovernanceProps) {
           <div className="space-y-4">
             {/* Search and filter */}
             <div className="flex items-center w-full max-w-sm relative">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground w-4 h-4" />
+              <MagnifyingGlass className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground w-4 h-4" />
               <input
                 type="text"
                 placeholder="Search agents..."
@@ -305,7 +305,7 @@ export function Governance({ agentData, updateAgentData }: GovernanceProps) {
                 
                 <div className="bg-muted p-3 rounded-md mt-6">
                   <div className="flex items-start">
-                    <AlertOctagon className="h-5 w-5 text-amber-500 mr-2 mt-0.5" />
+                    <WarningOctagon className="h-5 w-5 text-amber-500 mr-2 mt-0.5" />
                     <div>
                       <p className="text-sm font-medium">Recommendations</p>
                       <ul className="text-xs text-muted-foreground mt-1 space-y-1 list-disc pl-4">
@@ -337,7 +337,7 @@ export function Governance({ agentData, updateAgentData }: GovernanceProps) {
                   
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <ClipboardCheck className="h-4 w-4 mr-2 text-green-500" />
+                      <ClipboardText className="h-4 w-4 mr-2 text-green-500" />
                       <span className="text-sm">Permission Auditing</span>
                     </div>
                     <Badge variant="outline" className="bg-green-500/10 text-green-700 hover:bg-green-500/10">Active</Badge>
@@ -353,7 +353,7 @@ export function Governance({ agentData, updateAgentData }: GovernanceProps) {
                   
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <AlertOctagon className="h-4 w-4 mr-2 text-muted-foreground" />
+                      <WarningOctagon className="h-4 w-4 mr-2 text-muted-foreground" />
                       <span className="text-sm">Risk-Based Approvals</span>
                     </div>
                     <Badge variant="outline">Inactive</Badge>
