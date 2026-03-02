@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useKV } from '@github/spark/hooks'
+import { useLocalStorage } from './hooks/use-local-storage'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { OrganizationChart } from './components/OrganizationChart'
@@ -12,7 +12,7 @@ import { initialAgentData } from './data/initialData'
 
 function App() {
   // Initialize agent data in KV store if it doesn't exist
-  const [agentData, setAgentData] = useKV('agent-data', initialAgentData)
+  const [agentData, setAgentData] = useLocalStorage('agent-data', initialAgentData)
   const [activeTab, setActiveTab] = useState('dashboard')
 
   return (
